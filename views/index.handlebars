@@ -7,23 +7,22 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-6">
-      <h2>Burgers You Have Devoured</h2>
-        <ul>
-          {{#each burgers}}
-            {{#unless devoured}}
-              {{> burgers/burger-block devoured=true}}
-            {{/unless}}
-          {{/each}}
-        </ul>
-    </div>
-
-    <div class="col-6">
       <h2>Burgers You Want to Devour</h2>
         <ul>
           {{#each burgers}}
             {{#if devoured}}
               {{> burgers/burger-block devoured=false}}
             {{/if}}
+          {{/each}}
+        </ul>
+    </div>
+    <div class="col-6">
+      <h2>Burgers You Have Devoured</h2>
+        <ul>
+          {{#each burgers}}
+            {{#unless devoured}}
+              {{> burgers/burger-block devoured=true}}
+            {{/unless}}
           {{/each}}
         </ul>
     </div>
@@ -41,8 +40,8 @@
 
         <div class="form-group">
           <label for="devoured">Have You Tried This Burger Before?</label><br>
-          <input type="radio" name="devoured" value="0" checked> Yes <br>
-          <input type="radio" name="devoured" value="1"> No
+          <input type="radio" name="devoured" value="1" checked> Yes <br>
+          <input type="radio" name="devoured" value="0"> No
         </div>
     
         <button id="search-btn" class="btn btn-primary" type="submit">
