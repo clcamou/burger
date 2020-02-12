@@ -21,6 +21,5 @@ Christine Camou
 
 # Links 
 
-1. Github code: 
-2. Github hosted: 
-3. Heroku link: 
+1. Github code: https://github.com/clcamou/burger
+2. Heroku link: 
