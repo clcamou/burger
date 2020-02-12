@@ -1,12 +1,12 @@
-<header class="jumbotron">
-  <h1 class="display-3">Eat Da Burger</h1>
-  <p class="lead"> </p>
-</header>
 
+<img src="/assets/images/food/burger_sandwich_PNG4129.png" width="200" height="200" alt="hamburger">
 
+<h1 class="display-3">Eat-Da-Burger</h1>
+
+<br>
 <div class="container-fluid">
   <div class="row">
-    <div class="col-md">
+    <div class="col-6">
       <h2>Burgers You Have Devoured</h2>
         <ul>
           {{#each burgers}}
@@ -17,7 +17,7 @@
         </ul>
     </div>
 
-    <div class="col-md">
+    <div class="col-6">
       <h2>Burgers You Want to Devour</h2>
         <ul>
           {{#each burgers}}
@@ -29,22 +29,26 @@
     </div>
   </div>
 
-<h2>Add a New Burger</h2>
-<form class="create-form">
+  <div class="row">
+    <div class="col-lg">
+    <h2>Add a New Burger</h2>
+      <form class="create-form">
 
-  <div class="form-group">
-    <label for="ca">Burger Name:</label>
-    <input type="text" id="ca" name="burger_name">
-  </div>
+        <div class="form-group">
+          <label for="ca">Burger Name:</label>
+          <input type="text" id="ca" name="burger_name">
+        </div>
 
-  <div class="form-group">
-    <label for="devoured">Have You Tried This Burger Before?</label><br>
-    <input type="radio" name="devoured" value="1" checked> Yum!<br>
-    <input type="radio" name="devoured" value="0"> Devour it!
-  </div>
-
-  <button id="search-btn" class="btn btn-primary" type="submit"><i class="fas fa-hamburger"> Add a New Burger</i></button>
+        <div class="form-group">
+          <label for="devoured">Have You Tried This Burger Before?</label><br>
+          <input type="radio" name="devoured" value="0" checked> Yes <br>
+          <input type="radio" name="devoured" value="1"> No
+        </div>
+    
+        <button id="search-btn" class="btn btn-primary" type="submit">
+        <i class="fas fa-hamburger"> Add a New Burger</i></button>
   
-</form>
+      </form>
+  </div>
 
 </div>
