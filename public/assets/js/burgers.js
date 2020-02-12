@@ -5,13 +5,13 @@ $(function() {
       let newDevoured = $(this).data("newdevoured");
   
       let newDevoured = {
-        sleepy: newDevoured
+        devoured: newDevoured
       };
   
       // Send the PUT request.
       $.ajax("/api/burgers/" + id, {
         type: "PUT",
-        data: newDevoured
+        data: newDevouredState
       }).then(
         function() {
           console.log("changed devoured to", newDevoured);
@@ -26,7 +26,7 @@ $(function() {
       event.preventDefault();
   
       let newBurger = {
-        name: $("#ca").val().trim(),
+        name: $("#callback").val().trim(),
         sleepy: $("[name=devoured]:checked").val().trim()
       };
   

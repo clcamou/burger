@@ -1,12 +1,12 @@
-DROP DATABASE IF EXISTS `burgers_db`;
-CREATE DATABASE `burgers_db`;
+DROP DATABASE IF EXISTS burgers_db;
+CREATE DATABASE burgers_db;
 
 USE burgers_db;
 
-CREATE TABLE `burgers` (
-    `id` INT (11) AUTO_INCREMENT NOT NULL, 
-   `burger_name` VARCHAR (50) NOT NULL,  
-    `devoured` boolean NOT NULL, 
+CREATE TABLE burgers (
+    id INT (11) AUTO_INCREMENT NOT NULL, 
+    burger_name VARCHAR (250) NOT NULL,  
+    devoured BOOLEAN DEFAULT false, 
 
-    PRIMARY KEY (`id`)
+    PRIMARY KEY (id)
 );
