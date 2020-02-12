@@ -4,7 +4,7 @@ $(function() {
       let id = $(this).data("id");
       let newDevoured = $(this).data("newdevoured");
   
-      let newDevoured = {
+      let newDevouredState = {
         devoured: newDevoured
       };
   
@@ -26,8 +26,8 @@ $(function() {
       event.preventDefault();
   
       let newBurger = {
-        name: $("#callback").val().trim(),
-        sleepy: $("[name=devoured]:checked").val().trim()
+        name: $("#ca").val().trim(),
+        devoured: $("[name=devoured]:checked").val().trim()
       };
   
       // Send the POST request.

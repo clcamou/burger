@@ -2,28 +2,28 @@
 
 let orm = require("../config/orm.js");
 
-let burger = {
-    all: function(callback) {
+let burgers = {
+    all: function(cb) {
         orm.all("burgers", function(res){
-            callback(res);
+            cb(res);
         });
     },
-    create: function(cols, vals, callback) {
+    create: function(cols, vals, cb) {
         orm.create("burgers", cols, vals, function(res){
-            callback(res);
+            cb(res);
         });
     }, 
-    update: function(objColVals, condition, callback) {
+    update: function(objColVals, condition, cb) {
         orm.update("burgers", objColVals, condition, function(res){
-            callback(res);
+            cb(res);
         });
     }, 
-    delete: function(condition, callback) {
+    delete: function(condition, cb) {
         orm.delete("burgers", condition, function(res){
-            callback(res);
+            cb(res);
         });
     }
 };
 
 //export the databse functions 
-module.exports = burger;
+module.exports = burgers;
